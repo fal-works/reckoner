@@ -1,0 +1,14 @@
+# Common Build arguments
+
+-cp src
+-cp test
+-dce full
+
+--macro nullSafety("reckoner", Strict)
+-main Main
+
+-lib reckoner
+
+-D reckoner_use_xorshift32
+
+--debug

@@ -1,0 +1,4 @@
+# Build with HL/C
+
+common.hxml
+-hl out/c/main.c
