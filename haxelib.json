@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"tags": ["game"],
 	"description": "Small library for math and 2D geometry.",
-	"version": "0.1.0-alpha",
+	"version": "0.1.0",
 	"classPath": "src/",
 	"releasenote": "Initial release. Everything may change in future.",
 	"contributors": [
