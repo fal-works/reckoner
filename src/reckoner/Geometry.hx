@@ -85,4 +85,16 @@ class Geometry {
 	**/
 	public static extern inline function normalizeAngle(angle: Float): Float
 		return angle - TWO_PI * Math.floor((angle + PI) * ONE_OVER_TWO_PI);
+
+	/**
+		Converts degrees (360 for a full rotation) to radians (2π for a full rotation).
+	**/
+	public static extern inline function degreesToRadians(degrees: Float): Float
+		return DEGREES_TO_RADIANS * degrees;
+
+	/**
+		Converts radians (2π for a full rotation) to degrees (360 for a full rotation).
+	**/
+	public static extern inline function radiansToDegrees(degrees: Float): Float
+		return RADIANS_TO_DEGREES * degrees;
 }
