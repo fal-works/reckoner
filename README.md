@@ -33,6 +33,7 @@ Miscellaneous constants and functions related to numeric values.
 |flag|description|
 |---|---|
 |reckoner_use_xorshift32|Uses `Xorshift` in `Random`/`RandomCore`.|
+|reckoner_epsilon|Changes value of `Numeric.EPSILON` by `-D reckoner_epsilon=(any float)`|
 
 
 ## Dependencies
