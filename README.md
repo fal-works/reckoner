@@ -23,6 +23,10 @@ Constants and functions for geometry, such as angles and trigonometric calculati
 
 2D vector classes with inline constructor.
 
+### `ArcDegrees`
+
+Angle in degrees of arc (360 for a full rotation).
+
 ### `Numeric`
 
 Miscellaneous constants and functions related to numeric values.
