@@ -32,10 +32,10 @@ class Numeric {
 	}
 
 	/**
-		@return The floating-point remainder of `v / modulus`.
+		@return The floating-point remainder of `v / divisor`.
 	**/
-	public static extern inline function fmod(v: Float, modulus: Float): Float
-		return v % modulus;
+	public static extern inline function fmod(v: Float, divisor: Float): Float
+		return v % divisor;
 
 	/**
 		@return `true` if the absolute value of the difference of `a` and `b` is less than `EPSILON`.
