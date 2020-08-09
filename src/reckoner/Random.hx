@@ -27,6 +27,18 @@ class Random {
 		return min + float(max - min);
 
 	/**
+		@return Random float value in range `[-maxMagnitude, maxMagnitude)`.
+	**/
+	@:noUsing
+	public static extern inline function signed(maxMagnitude: Float): Float {
+		#if reckoner_use_xorshift32
+		return maxMagnitude * RandomCore.randomSigned();
+		#else
+		return maxMagnitude * (-1.0 + random() * 2.0);
+		#end
+	}
+
+	/**
 		@return Random integer value from `0` up to (but not including) `max`.
 	**/
 	@:noUsing
@@ -41,25 +53,12 @@ class Random {
 		return min + int(max - min);
 
 	/**
-		Returns `true` or `false` randomly.
-		@param probability Any number in range `[0, 1]`.
-		@returns `true` with the given `probability`.
+		@return Random integer value, positive or negative,
+		of which the absolute value varies from `0` up to (but not including) `max`.
 	**/
 	@:noUsing
-	public static extern inline function bool(probability: Float): Bool
-		return random() < probability;
-
-	/**
-		@return Random float value in range `[-maxMagnitude, maxMagnitude)`.
-	**/
-	@:noUsing
-	public static extern inline function signed(maxMagnitude: Float): Float {
-		#if reckoner_use_xorshift32
-		return maxMagnitude * RandomCore.randomSigned();
-		#else
-		return maxMagnitude * (-1.0 + random() * 2.0);
-		#end
-	}
+	public static extern inline function signedInt(maxMagnitude: Float): Int
+		return Floats.toInt(signed(maxMagnitude));
 
 	/**
 		@return Random float value in range `[0, 2π)`.
@@ -79,4 +78,13 @@ class Random {
 		return Geometry.MINUS_PI + angle();
 		#end
 	}
+
+	/**
+		Returns `true` or `false` randomly.
+		@param probability Any number in range `[0, 1]`.
+		@returns `true` with the given `probability`.
+	**/
+	@:noUsing
+	public static extern inline function bool(probability: Float): Bool
+		return random() < probability;
 }
