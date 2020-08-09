@@ -6,7 +6,7 @@
 	"description": "Small library for math and 2D geometry.",
 	"version": "0.2.0-alpha",
 	"classPath": "src/",
-	"releasenote": "",
+	"releasenote": "Added methods of ArcDegrees.",
 	"contributors": [
 		"fal-works"
 	],
