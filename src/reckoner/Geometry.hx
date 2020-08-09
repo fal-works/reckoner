@@ -84,7 +84,7 @@ class Geometry {
 		@return Angle between `-PI` and `PI`.
 	**/
 	public static extern inline function normalizeAngle(angle: Float): Float
-		return angle - TWO_PI * Math.floor((angle + PI) * ONE_OVER_TWO_PI);
+		return angle - TWO_PI * Math.ffloor((angle + PI) * ONE_OVER_TWO_PI);
 
 	/**
 		Converts degrees (360 for a full rotation) to radians (2π for a full rotation).

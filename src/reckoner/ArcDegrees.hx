@@ -52,5 +52,5 @@ abstract ArcDegrees(Float) from Float to Float {
 		@return `ArcDegrees` between `-180` and `180`.
 	**/
 	public extern inline function normalize(): ArcDegrees
-		return this - 360.0 * Math.floor((this + 180.0) * ONE_OVER_360);
+		return this - 360.0 * Math.ffloor((this + 180.0) * ONE_OVER_360);
 }
