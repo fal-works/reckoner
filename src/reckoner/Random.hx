@@ -7,10 +7,28 @@ import sinker.Floats;
 **/
 class Random {
 	/**
+		Alias for `Random.ratio()` and `RandomCore.random()`.
 		@return Random float value in range `[0, 1)`.
 	**/
 	public static extern inline function random(): Float
 		return RandomCore.random();
+
+	/**
+		@return Random float value in range `[0, 1)`.
+	**/
+	public static extern inline function ratio(): Float
+		return RandomCore.random();
+
+	/**
+		@return Random float value in range `[-1, 1)`.
+	**/
+	public static extern inline function signedRatio(): Float {
+		#if reckoner_use_xorshift32
+		return RandomCore.randomSigned();
+		#else
+		return -1.0 + random() * 2.0;
+		#end
+	}
 
 	/**
 		@return Random float value in range `[0, max)`.
@@ -30,13 +48,8 @@ class Random {
 		@return Random float value in range `[-maxMagnitude, maxMagnitude)`.
 	**/
 	@:noUsing
-	public static extern inline function signed(maxMagnitude: Float): Float {
-		#if reckoner_use_xorshift32
-		return maxMagnitude * RandomCore.randomSigned();
-		#else
-		return maxMagnitude * (-1.0 + random() * 2.0);
-		#end
-	}
+	public static extern inline function signed(maxMagnitude: Float): Float
+		return maxMagnitude * signedRatio();
 
 	/**
 		@return Random integer value from `0` up to (but not including) `max`.
