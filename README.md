@@ -32,6 +32,11 @@ Angle in degrees of arc (360 for a full rotation).
 Miscellaneous constants and functions related to numeric values.
 
 
+## Caveats
+
+Unstable!
+
+
 ## Compilation Flags
 
 |flag|description|
