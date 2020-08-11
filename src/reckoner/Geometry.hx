@@ -95,6 +95,6 @@ class Geometry {
 	/**
 		Converts radians (2π for a full rotation) to degrees (360 for a full rotation).
 	**/
-	public static extern inline function radiansToDegrees(degrees: Float): Float
-		return RADIANS_TO_DEGREES * degrees;
+	public static extern inline function radiansToDegrees(radians: Float): Float
+		return RADIANS_TO_DEGREES * radians;
 }
