@@ -22,12 +22,12 @@ class Geometry {
 	public static extern inline final MINUS_PI: Float = -PI;
 
 	/**
-		2π
+		π / 2
 	**/
 	public static extern inline final HALF_PI: Float = PI / 2.0;
 
 	/**
-		2π
+		-π / 2
 	**/
 	public static extern inline final MINUS_HALF_PI: Float = MINUS_PI / 2.0;
 
