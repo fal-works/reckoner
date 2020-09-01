@@ -2,6 +2,11 @@
 
 Small library for math and 2D geometry.
 
+**Requires Haxe 4** (developed with v4.1.3).
+
+## Caveats
+
+Unstable!
 
 ## Features
 
@@ -31,23 +36,16 @@ Angle in degrees of arc (360 for a full rotation).
 
 Miscellaneous constants and functions related to numeric values.
 
-
-## Caveats
-
-Unstable!
-
-
 ## Compilation Flags
 
-|flag|description|
-|---|---|
-|reckoner_use_xorshift32|Uses `Xorshift` in `Random`/`RandomCore`.|
-|reckoner_epsilon|Changes value of `Numeric.EPSILON` by `-D reckoner_epsilon=(any float)`|
-
+| flag                    | description                                                             |
+| ----------------------- | ----------------------------------------------------------------------- |
+| reckoner_use_xorshift32 | Uses `Xorshift` in `Random`/`RandomCore`.                               |
+| reckoner_epsilon        | Changes value of `Numeric.EPSILON` by `-D reckoner_epsilon=(any float)` |
 
 ## Dependencies
 
-- [sinker](https://github.com/fal-works/sinker) v0.4.0 or compatible
+-   [sinker](https://github.com/fal-works/sinker) v0.5.0 or compatible
 
 See also:
 [FAL Haxe libraries](https://github.com/fal-works/fal-haxe-libraries)
