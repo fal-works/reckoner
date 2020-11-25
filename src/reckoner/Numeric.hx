@@ -43,4 +43,16 @@ class Numeric {
 	@:noUsing
 	public static extern inline function nearlyEqual(a: Float, b: Float): Bool
 		return Math.abs(a - b) < EPSILON;
+
+	/**
+		@return x ^ 2
+	**/
+	public static extern inline function square(x: Float): Float
+		return x * x;
+
+	/**
+		@return x ^ 3
+	**/
+	public static extern inline function cube(x: Float): Float
+		return x * x * x;
 }
