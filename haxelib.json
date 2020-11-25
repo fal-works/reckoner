@@ -4,9 +4,9 @@
 	"license": "MIT",
 	"tags": ["game"],
 	"description": "Small library for math and 2D geometry.",
-	"version": "0.2.0",
+	"version": "0.3.0-alpha",
 	"classPath": "src/",
-	"releasenote": "Added methods of Random and ArcDegrees. Other minor fixes.",
+	"releasenote": "",
 	"contributors": [
 		"fal-works"
 	],
