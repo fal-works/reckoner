@@ -66,6 +66,14 @@ class Geometry {
 		return Math.sin(angle);
 
 	/**
+		@return Sum of squares of `x` and `y` (= square of `hypot()`).
+	**/
+	@:noUsing
+	public static extern inline function hypotSq(x: Float, y: Float): Float {
+		return (x * x) + (y * y);
+	}
+
+	/**
 		@return Square root of the sum of squares of `x` and `y`.
 	**/
 	@:noUsing
